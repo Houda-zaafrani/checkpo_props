@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Getting Started with Create React App with name props
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# I create folder "data" that have the file "data.js"
 
-## Available Scripts
+# ############# data.js
 
-In the project directory, you can run:
+# this file contain our array "playerList" of objects : name, team, nationality, jerseyNumber, age, Image_URL,"playerList" was exported.
 
-### `npm start`
+# ############# PlayerCard.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# we import card from bootstap that will contain our data for evry player
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# step of creating card :
 
-### `npm test`
+# 1- install bootstrap with npm install react-bootstrap bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 2- copy css bootstrap in App.css
 
-### `npm run build`
+# 3- choose the card
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 4- copy the code of carde
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# we declare props {player} like argument in our component 'PlayerCard'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# change the date of bootstrap card to the value of our object by calling evry value using props 'player' "player.keyOfObject
 
-### `npm run eject`
+# ############# ListPlayers.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# in PlayerCard.js we have the card structure of evry player, now we will display all the players in our array of object 'playerList'
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# in the component ListPlayers we have like argument the array pf object 'playerList'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# we use array function map() to display all players.We map in evry 'player'(props in the component 'PlayerCard') and display his information in the card
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# ############# App.js
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# we import in this file our array 'playerList' and file ListPlayer.js that contain all players
